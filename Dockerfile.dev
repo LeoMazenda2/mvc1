@@ -1,0 +1,12 @@
+FROM mcr.microsoft.com/dotnet/sdk:6.0
+RUN mkdir /app
+
+WORKDIR /app
+COPY mvc1.csproj .
+
+RUN dotnet restore
+COPY . .
+
+RUN dotnet publish -c Release -o dist
+EXPOSE 80/tcp
+ENTRYPOINT ["dotnet","dist/mvc1.dll"]
