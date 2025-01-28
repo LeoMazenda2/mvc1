@@ -1,0 +1,20 @@
+# Estágio 1: Preparação do ambiente de execução (runtime)
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+RUN mkdir /app
+WORKDIR /app
+EXPOSE 80/tcp
+
+# Estágio 2: Publicação da aplicação
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS publish
+WORKDIR /src
+COPY source/mvc1.csproj ./
+RUN dotnet restore
+COPY . ./
+RUN dotnet publish -c Release -o /app/dist
+
+# Estágio 3: Contêiner final para execução
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/dist .
+ENTRYPOINT ["dotnet", "mvc1.dll"]
+
