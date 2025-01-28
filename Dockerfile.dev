@@ -7,6 +7,8 @@ COPY mvc1.csproj .
 RUN dotnet restore
 COPY . .
 
-RUN dotnet publish -c Release -o dist
+# Aqui, especificamos o arquivo .csproj ao invés de apenas rodar o dotnet publish
+RUN dotnet publish mvc1.csproj -c Release -o dist
+
 EXPOSE 80/tcp
-ENTRYPOINT ["dotnet","dist/mvc1.dll"]
+ENTRYPOINT ["dotnet", "dist/mvc1.dll"]
