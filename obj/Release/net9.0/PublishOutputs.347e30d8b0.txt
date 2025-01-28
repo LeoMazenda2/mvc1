@@ -1,0 +1,14 @@
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\mvc1.exe
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\appsettings.Development.json
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\appsettings.json
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\mvc1.dll
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\mvc1.runtimeconfig.json
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\mvc1.pdb
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\Microsoft.EntityFrameworkCore.dll
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\MySqlConnector.dll
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\Pomelo.EntityFrameworkCore.MySql.Design.dll
+C:\Users\Leonildo Mazenda\Desktop\Clonados\mvc1\dist\mvc1.deps.json
