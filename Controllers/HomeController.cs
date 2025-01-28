@@ -4,28 +4,20 @@ using mvc1.Models;
 
 namespace mvc1.Controllers;
 
-public class HomeController : Controller
+public class        HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
+    private IRepository repository;
+    private readonly IHttpContextAccessor _httpContextAccessor;
+    private string message;
+    public HomeController(IRepository repo, IHttpContextAccessor httpContextAccessor) {
+        repository = repo;
+        _httpContextAccessor = httpContextAccessor;
+        var hostname = _httpContextAccessor.HttpContext.Request.Host.Value;
+        message = $"Docker - ({hostname})"; 
     }
-
     public IActionResult Index()
     {
-        return View();
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        ViewBag.Message = message;
+        return View(repository.Produtos);
     }
 }
